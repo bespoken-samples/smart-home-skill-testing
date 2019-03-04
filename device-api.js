@@ -2,7 +2,7 @@
 module.exports = {
 	getState: () => {
 		return {
-			status: "on",
+			status: "ON",
 		};
 	}
 };

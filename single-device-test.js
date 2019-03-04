@@ -10,18 +10,22 @@ require("dotenv").config();
 describe("single device", function() {
 	// Increase the timeout for these tests to 60 seconds
 	this.timeout(60000);
+	const virtualDevice = new vdk.VirtualDevice(process.env.VIRTUAL_DEVICE_TOKEN); 
+			
+	afterEach(async function() {
+		// Turn off the device after each test
+		return virtualDevice.message("turn off bedroom lamp");
+	});
 
 	describe("turn on and off", function() {
-	  	it("should toggle without error", async function() {
+		it("should toggle without error", async function() {
 			// To interact with a Bespoken Virtual Device, sign up and create one at:
 			//	https://apps.bespoken.io/dashboard
 			// They virtual devices allow you to talk to Alexa and Google Assistant programmatically  
 			// The token once created should be set as an environment variable named VIRTUAL_DEVICE_TOKEN
-			const virtualDevice = new vdk.VirtualDevice(process.env.VIRTUAL_DEVICE_TOKEN); 
-			const response = await virtualDevice.message("turn on office lamp");
+			const response = await virtualDevice.message("turn on bedroom lamp");
 
 			const successAlexa = response.transcript.includes("ok");
-			console.log("Transcript: " + response.transcript);
 			
 			// Check the device API to ensure it also worked
 			// In this case, we use a simple mock - but just substitute in your real API here
