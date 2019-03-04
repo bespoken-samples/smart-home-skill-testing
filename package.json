@@ -1,0 +1,18 @@
+{
+  "name": "smart-home-example",
+  "version": "1.0.0",
+  "description": "Smart Home Example project",
+  "main": "test.js",
+  "scripts": {
+    "test": "mocha *-test.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "chai": "^4.2.0",
+    "datadog-metrics": "^0.8.1",
+    "dotenv": "^6.2.0",
+    "mocha": "^6.0.2",
+    "virtual-device-sdk": "^1.5.8"
+  }
+}
