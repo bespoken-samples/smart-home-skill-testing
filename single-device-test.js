@@ -12,7 +12,7 @@ describe("single device", function() {
 	this.timeout(60000);
 
 	describe("turn on and off", function() {
-	  	it("should toggle without error", async function(done) {
+	  	it("should toggle without error", async function() {
 			// To interact with a Bespoken Virtual Device, sign up and create one at:
 			//	https://apps.bespoken.io/dashboard
 			// They virtual devices allow you to talk to Alexa and Google Assistant programmatically  
@@ -33,25 +33,23 @@ describe("single device", function() {
 			// Here we increment a counter everytime we have success for the device
 			// Using the counter, we can see the results over time as well as trigger notifications if too many tests fail
 			if (process.env.DATADOG_API_KEY) {
-				metrics.init({ host: process.env.DEVICE_ID, prefix: "smart-home" });
+				metrics.init({ host: process.env.DEVICE_ID, prefix: "device." });
 				if (successAlexa) {
-					metrics.increment("device.alexa.success");
+					metrics.increment("alexa.success");
 				} else {
-					metrics.increment("device.alexa.failure");
+					metrics.increment("alexa.failure");
 				}
 
 				if (successDevice) {
-					metrics.increment("device.api.success");
+					metrics.increment("api.success");
 				} else {
-					metrics.increment("device.api.failure");
+					metrics.increment("api.failure");
 				}
 			}
 
-			// Do our mocha assertions
+			// Do our assertions
 			expect(successAlexa, "Call to Alexa failed").to.be.true;
 			expect(successDevice, "Device state was not set properly").to.be.true;
-
-			done();
 	  	});
 	});
 });
