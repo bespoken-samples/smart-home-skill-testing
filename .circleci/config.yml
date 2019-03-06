@@ -1,3 +1,5 @@
+version: 2
+
 jobs:
   test:
     docker:
@@ -9,10 +11,10 @@ jobs:
 
 workflows:
   version: 2
-  nightly:
+  continuous:
     triggers:
       - schedule:
-        cron: "0 0 * * *"
+        cron: "*/5 * * * *"
         filters:
           branches:
             only:
