@@ -27,6 +27,8 @@ Follow these directions to get one - [Bespoken Virtual Device setup](https://rea
 4) A DataDog account
 This is optional - but DataDog is a nice tool for visualizing metrics as well as configuring notifications when there are issues.
 
+The virtual device token as well as the Data Dog API key should go into the .env file. If no DataDog API key is supplied, this steps wills be skipped.
+
 Once configured, you can run the tests:
 `npm test`
 
@@ -42,9 +44,8 @@ The Circle CI docs are [here for more detailed information](https://circleci.com
 To read more about this project, check out our Deako case study this was based on LINK HERE.
 
 # TODO
-- [ ] Add multipe device test using CSV
 - [ ] Add Circle CI configuration
 - [ ] Add badges
-- [ ] Add Travis configuration (? Probably no)
 - [ ] Add a pretty dashboard on DataDog
-- [ ] Fill in README
+- [ ] Add link to blog in README
+- [ ] Replace .env values with stubs
