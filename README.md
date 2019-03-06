@@ -46,15 +46,21 @@ The Circle CI workflow to do this is in this file: [./.circleci/config.yml](.cir
 
 The Circle CI docs are [here for more detailed information](https://circleci.com/docs/).
 
+If you setup your own automated test using Circle CI, be sure to set the environment variables within Circle.
+
 ### Deako Case Study
 To read more about this project, check out our Deako case study this was based on LINK HERE.
 
+## Get In Touch
+Interested in automated testing for Home Automation? Have questions for us?
+
+Reach out to [support@bespoken.io](mailto:support@bespoken.io) or chat with us on [Gitter][https://gitter.im/bespoken/bst].
 ## TODO
 - [X] Add Circle CI configuration
 - [X] Add badges
+- [X] Add contact info to README
+- [X] Replace .env values with stubs
+- [X] Add circle configuration stuff to README - tell people about setting env variables
 - [ ] Add a pretty dashboard on DataDog
 - [ ] Add link to blog in README
-- [ ] Replace .env values with stubs
-- [ ] Add circle configuration stuff to README - tell people about setting env variables
-- [ ] Add CI triggered build
-- [ ] Add contact info to README
+- [ ] Add CI triggered build?

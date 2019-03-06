@@ -41,7 +41,7 @@ describe("single device", function() {
 			// Leveraging DataDog is great for advanced reporting and notifications
 			// Here we increment a counter everytime we have success for the device
 			// Using the counter, we can see the results over time as well as trigger notifications if too many tests fail
-			console.log("DATADOG: " + process.env.DATADOG_API_KEY);
+			console.log("DATADOG: " + process.env.DATADOG_API_KEY + "DEVICE_ID: " + process.env.DEVICE_ID);
 			if (process.env.DATADOG_API_KEY) {
 				metrics.init({ host: process.env.DEVICE_ID, prefix: "device." });
 				if (successAlexa) {
