@@ -5,8 +5,8 @@ jobs:
     steps:
       - checkout
       - run: npm install
-      - run: npm test
-      
+      - run: npm run continuous-test
+
 workflows:
   version: 2
   nightly:

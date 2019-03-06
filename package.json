@@ -1,9 +1,9 @@
 {
-  "name": "smart-home-example",
+  "name": "smart-home-skill-testing",
   "version": "1.0.0",
-  "description": "Smart Home Example project",
-  "main": "test.js",
+  "description": "Smart Home skill testing sample project",
   "scripts": {
+    "continuous-test": "mocha single-device-test.js",
     "test": "mocha *-test.js"
   },
   "author": "Bespoken",
