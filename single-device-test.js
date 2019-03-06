@@ -12,6 +12,11 @@ describe("single device", function() {
 	this.timeout(60000);
 	const virtualDevice = new vdk.VirtualDevice(process.env.VIRTUAL_DEVICE_TOKEN); 
 			
+	beforeEach(async function() {
+		// Do any stuff here to ensure the state of the device is "clean" before we start testing
+		deviceAPI.updateState(process.env.DEVICE_API_KEY, process.env.DEVICE_ID, { status: "OFF" });
+	});
+
 	afterEach(async function() {
 		// Turn off the device after each test
 		return virtualDevice.message("turn off bedroom lamp");
@@ -52,7 +57,7 @@ describe("single device", function() {
 			}
 
 			// Do our assertions
-			expect(successAlexa, "Call to Alexa failed").to.be.true;
+			expect(successAlexa, "Call to Alexa failed: " + response.transcript).to.be.true;
 			expect(successDevice, "Device state was not set properly").to.be.true;
 	  	});
 	});

@@ -4,5 +4,9 @@ module.exports = {
 		return {
 			status: "ON",
 		};
+	},
+
+	updateState: () => {
+	
 	}
 };
