@@ -34,16 +34,15 @@ describe("single device", function() {
 			
 			// Check the device API to ensure it also worked
 			// In this case, we use a simple mock - but just substitute in your real API here
-			const state = deviceAPI.getState(process.env.DEVICE_API_KEY, process.env.DEVICE_ID)
+			const state = deviceAPI.getState(process.env.DEVICE_API_KEY, "bedroom-lamp")
 			const successDevice = state.status === "ON";
 
 			// Send the stats to Data Dog [Optional step]
 			// Leveraging DataDog is great for advanced reporting and notifications
 			// Here we increment a counter everytime we have success for the device
 			// Using the counter, we can see the results over time as well as trigger notifications if too many tests fail
-			console.log("DATADOG: " + process.env.DATADOG_API_KEY + "DEVICE_ID: " + process.env.DEVICE_ID);
 			if (process.env.DATADOG_API_KEY) {
-				metrics.init({ host: process.env.DEVICE_ID, prefix: "device." });
+				metrics.init({ host: "bedroom-lamp", prefix: "device." });
 				if (successAlexa) {
 					metrics.increment("alexa.success");
 				} else {
