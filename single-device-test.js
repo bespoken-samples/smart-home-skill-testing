@@ -54,6 +54,7 @@ describe("single device", function() {
 				} else {
 					metrics.increment("api.failure");
 				}
+				console.log("DATADOG DATA SENT");
 			}
 
 			// Do our assertions
