@@ -59,6 +59,7 @@ describe("multiple devices", function() {
 					} else {
 						metrics.increment("api.failure");
 					}
+					metrics.flush();
 				}
 
 				// Do our assertions
