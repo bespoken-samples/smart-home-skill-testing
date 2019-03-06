@@ -51,9 +51,10 @@ To read more about this project, check out our Deako case study this was based o
 
 ## TODO
 - [X] Add Circle CI configuration
-- [ ] Add badges
+- [X] Add badges
 - [ ] Add a pretty dashboard on DataDog
 - [ ] Add link to blog in README
 - [ ] Replace .env values with stubs
-- [ ] Add circle configuration stuff to README
+- [ ] Add circle configuration stuff to README - tell people about setting env variables
 - [ ] Add CI triggered build
+- [ ] Add contact info to README
