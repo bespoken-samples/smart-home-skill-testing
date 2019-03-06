@@ -1,4 +1,5 @@
 # Smart Home Skill - Testing Sample Project
+[![CircleCI](https://circleci.com/gh/bespoken-samples/smart-home-skill-testing.svg?style=svg)](https://circleci.com/gh/bespoken-samples/smart-home-skill-testing)
 ## What Is This?
 This is a simple project that demonstrates automated testing for a Smart Home skill.
 
@@ -49,9 +50,10 @@ The Circle CI docs are [here for more detailed information](https://circleci.com
 To read more about this project, check out our Deako case study this was based on LINK HERE.
 
 ## TODO
-- [ ] Add Circle CI configuration
+- [X] Add Circle CI configuration
 - [ ] Add badges
 - [ ] Add a pretty dashboard on DataDog
 - [ ] Add link to blog in README
 - [ ] Replace .env values with stubs
 - [ ] Add circle configuration stuff to README
+- [ ] Add CI triggered build
