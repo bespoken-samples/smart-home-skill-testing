@@ -5,7 +5,7 @@
 </p>
 
 <p align="center">
-  Smart Home Skill Testing - Sample and Guide
+  <b>Smart Home Skill Testing - Sample and Guide</b><br>
   Learn how to quickly and comprehensively automate testing for Smart Home skills.
 </p>
 
@@ -14,7 +14,7 @@
         <img alt="Build Status" class="badge" src="https://circleci.com/gh/bespoken-samples/smart-home-skill-testing.svg?style=svg">
     </a>
     <a href="https://bespoken.io/blog/smart-home-case-study">
-        <img alt="Read The Docs" class="badge" src="https://img.shields.io/badge/docs-latest-brightgreen.svg?style=flat">
+        <img alt="Read The Docs" class="badge" src="https://img.shields.io/badge/blog-latest-brightgreen.svg?style=flat">
     </a>
     <a href="https://gitter.im/bespoken/bst?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge">
         <img alt="Contact us" class="badge" src="https://badges.gitter.im/bespoken/bst.svg">
