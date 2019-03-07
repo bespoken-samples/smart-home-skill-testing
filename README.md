@@ -82,7 +82,7 @@ Take a look at this nice graph from DataDog of the uptime for our device being t
 # Get In Touch
 Interested in automated testing for Home Automation? Have questions for us?
 
-Reach out to [support@bespoken.io](mailto:support@bespoken.io) or chat with us on [Gitter][https://gitter.im/bespoken/bst].
+Reach out to [support@bespoken.io](mailto:support@bespoken.io) or chat with us on [Gitter](https://gitter.im/bespoken/bst).
 
 # TODO
 - [X] Add Circle CI configuration
@@ -91,7 +91,8 @@ Reach out to [support@bespoken.io](mailto:support@bespoken.io) or chat with us o
 - [X] Replace .env values with stubs
 - [X] Add circle configuration stuff to README - tell people about setting env variables
 - [X] Add lint to package.json
-- [ ] Add a pretty dashboard on DataDog
+- [X] Add a pretty dashboard on DataDog
+- [X] Add Logo to README
 - [ ] Add link to blog in README
 - [ ] Add CI triggered build?
-- [ ] Add Logo to README
+- [X] Refactor DataDog code

@@ -39,23 +39,7 @@ describe("single device", function() {
 
 			// Send the stats to Data Dog [Optional step]
 			// Leveraging DataDog is great for advanced reporting and notifications
-			// Here we increment a counter everytime we have success for the device
-			// Using the counter, we can see the results over time as well as trigger notifications if too many tests fail
-			if (process.env.DATADOG_API_KEY) {
-				metrics.init({ host: "bedroom-lamp", prefix: "device." });
-				if (successAlexa) {
-					metrics.increment("alexa.success");
-				} else {
-					metrics.increment("alexa.failure");
-				}
-
-				if (successDevice) {
-					metrics.increment("api.success");
-				} else {
-					metrics.increment("api.failure");
-				}
-				metrics.flush();
-			}
+			sendToDataDog("bedroom-lamp", successAlexa, successDevice);
 
 			// Do our assertions
 			expect(successAlexa, "Call to Alexa failed: " + response.transcript).to.be.true;
@@ -63,3 +47,23 @@ describe("single device", function() {
 		});
 	});
 });
+
+// Here we increment a counter everytime we have success interacting with the device
+// Using the counter, we can see the results over time as well as trigger notifications if too many tests fail				
+function sendToDataDog(deviceID, successAlexa, successDevice) {
+	if (process.env.DATADOG_API_KEY) {
+		metrics.init({ host: deviceID, prefix: "device." });
+		if (successAlexa) {
+			metrics.increment("alexa.success");
+		} else {
+			metrics.increment("alexa.failure");
+		}
+
+		if (successDevice) {
+			metrics.increment("api.success");
+		} else {
+			metrics.increment("api.failure");
+		}
+		metrics.flush();
+	}
+}
