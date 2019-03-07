@@ -10,7 +10,7 @@ It uses Bespoken's Virtual Device API to interact with Smart Home device via Ale
 
 It also shows an external API being used - the intention is this will be the canonical API for the device. This is used to ensure devices are in the proper state to be tested, and that the commands to Alexa have had the intended effect.
 
-Most Smart Home devices have APIs like this - for our tests here, we just us a mock. In real test, an implementer should replace the mock with their real API calls.
+Most Smart Home devices have APIs like this - for our tests here, we just use a mock. In real test, an implementer should replace the mock with their real API calls.
 
 ## Test Overview
 There are two test suites - [single-device-test.js](single-device-test.js) and [multi-device-test.js](multi-device-test.js).
@@ -28,11 +28,11 @@ For our multi-device test, the device names being tested come from a CSV file. F
 ## Getting Setup
 To get setup, you will need the following (and some of this you likely already have):
 1) [Node.js installed](https://nodejs.org/en/download/)
-2) Project dependencies installed
-Open a command-line window, and run `npm install` in the directory where this project is isntalled
-3) A Bespoken Virtual Device token
+2) Project dependencies installed:
+Open a command-line window, and run `npm install` in the directory where this project is installed
+3) A Bespoken Virtual Device token:
 Follow these directions to get one - [Bespoken Virtual Device setup](https://read.bespoken.io/end-to-end/setup). 
-4) A DataDog account
+4) A DataDog account:
 This is optional - but DataDog is a nice tool for visualizing metrics as well as configuring notifications when there are issues.
 
 The virtual device token as well as the Data Dog API key should go into the .env file. If no DataDog API key is supplied, this steps wills be skipped.
@@ -46,7 +46,7 @@ These tests are configured to be run on a five-minute interval via Circle CI.
 
 The Circle CI workflow to do this is in this file: [./.circleci/config.yml](.circleci/config.yml).
 
-The Circle CI docs are [here for more detailed information](https://circleci.com/docs/).
+For more detailed information, the Circle CI docs are [here](https://circleci.com/docs/).
 
 If you setup your own automated test using Circle CI, be sure to set the environment variables within Circle.
 
