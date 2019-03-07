@@ -13,7 +13,7 @@ It also shows an external API being used - the intention is this will be the can
 Most Smart Home devices have APIs like this - for our tests here, we just us a mock. In real test, an implementer should replace the mock with their real API calls.
 
 ## Test Overview
-There are two test suites - [single-device-test.js](single-device-test.js) and [multi-device-test.js](single-device-test.js).
+There are two test suites - [single-device-test.js](single-device-test.js) and [multi-device-test.js](multi-device-test.js).
 
 The first one shows testing a single device, the second one shows a slightly more complex test that uses a CSV file to test a number of devices.
 
@@ -22,6 +22,8 @@ The basic sequence is simple:
 2) Interact with Alexa - "alexa, turn the bedroom lamp off"
 3) Check with the device itself via its API to confirm the result
 4) Report the results to DataDog 
+
+For our multi-device test, the device names being tested come from a CSV file. For those wishing to test many different devices, this example shows a simple but powerful approach to doing this.
 
 ## Getting Setup
 To get setup, you will need the following (and some of this you likely already have):
@@ -64,3 +66,5 @@ Reach out to [support@bespoken.io](mailto:support@bespoken.io) or chat with us o
 - [ ] Add a pretty dashboard on DataDog
 - [ ] Add link to blog in README
 - [ ] Add CI triggered build?
+- [ ] Add lint to package.json
+- [ ] Add Logo to README

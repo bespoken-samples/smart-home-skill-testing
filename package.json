@@ -4,6 +4,7 @@
   "description": "Smart Home skill testing sample project",
   "scripts": {
     "continuous-test": "mocha single-device-test.js",
+    "lint": "eslint *.js",
     "test": "mocha *-test.js"
   },
   "author": "Bespoken",
@@ -13,7 +14,18 @@
     "csv": "^5.1.1",
     "datadog-metrics": "^0.8.1",
     "dotenv": "^6.2.0",
+    "eslint": "^5.15.1",
     "mocha": "^6.0.2",
     "virtual-device-sdk": "^1.5.8"
+  },
+  "eslintConfig": {
+    "extends": "eslint:recommended",
+    "env": {
+      "mocha": true,
+      "node": true
+    },
+    "parserOptions": { 
+      "ecmaVersion": 2017
+    }
   }
 }

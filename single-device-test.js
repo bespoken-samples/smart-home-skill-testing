@@ -55,12 +55,11 @@ describe("single device", function() {
 					metrics.increment("api.failure");
 				}
 				metrics.flush();
-				console.log("DATADOG DATA SENT");
 			}
 
 			// Do our assertions
 			expect(successAlexa, "Call to Alexa failed: " + response.transcript).to.be.true;
 			expect(successDevice, "Device state was not set properly").to.be.true;
-	  	});
+		});
 	});
 });

@@ -16,12 +16,11 @@ describe("multiple devices", function() {
 
 	// Read the device names from a CSV
 	const devices = csvparse(fs.readFileSync("devices.csv"));
-	console.log("devices: " + devices);
 	
 	for (const deviceArray of devices) {
 		const deviceName = deviceArray[0];
-		console.log(`Device ${deviceName}`);
 		const deviceID = deviceName.split(" ").join("-");
+	
 		describe(`turn on and off ${deviceName}`, function() {
 			afterEach(async function() {
 				// Turn off the device after each test
