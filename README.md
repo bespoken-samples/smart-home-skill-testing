@@ -84,15 +84,3 @@ Interested in automated testing for Home Automation? Have questions for us?
 
 Reach out to [support@bespoken.io](mailto:support@bespoken.io) or chat with us on [Gitter](https://gitter.im/bespoken/bst).
 
-# TODO
-- [X] Add Circle CI configuration
-- [X] Add badges
-- [X] Add contact info to README
-- [X] Replace .env values with stubs
-- [X] Add circle configuration stuff to README - tell people about setting env variables
-- [X] Add lint to package.json
-- [X] Add a pretty dashboard on DataDog
-- [X] Add Logo to README
-- [ ] Add link to blog in README
-- [ ] Add CI triggered build?
-- [X] Refactor DataDog code

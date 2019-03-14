@@ -17,15 +17,5 @@
     "eslint": "^5.15.1",
     "mocha": "^6.0.2",
     "virtual-device-sdk": "^1.5.8"
-  },
-  "eslintConfig": {
-    "extends": "eslint:recommended",
-    "env": {
-      "mocha": true,
-      "node": true
-    },
-    "parserOptions": { 
-      "ecmaVersion": 2017
-    }
   }
 }
